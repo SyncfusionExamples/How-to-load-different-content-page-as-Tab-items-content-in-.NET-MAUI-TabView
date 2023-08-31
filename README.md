@@ -39,7 +39,6 @@ public class ViewModel : INotifyPropertyChanged
     public ViewModel()
     {
         SetItems();
-
     }
 
     internal void SetItems()
