@@ -30,15 +30,17 @@ public class ViewModel : INotifyPropertyChanged
             OnPropertyChanged("Items");
         }
     }
+
     protected virtual void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
     public ViewModel()
     {
         SetItems();
-
     }
+
     internal void SetItems()
     {
         Items = new TabItemCollection();
@@ -54,4 +56,5 @@ public class ViewModel : INotifyPropertyChanged
 }
 ```
 **Output**
+
 ![TabViewPages.png](https://support.bolddesk.com/kb/agent/attachment/article/13619/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwNTU5Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkZGVzay5jb20ifQ.UAU0WqpCG6PimR7gKydxiUQCrsGYjXL6xtDTT8zzhN4)
